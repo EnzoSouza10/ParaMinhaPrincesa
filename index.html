@@ -10,6 +10,24 @@
 <body>
   <canvas id="sky-canvas" aria-hidden="true"></canvas>
   <div class="star-field" aria-hidden="true"></div>
+  <button class="rare-star" id="rare-star" type="button" aria-label="Abrir estrela rara">
+    <span aria-hidden="true">✦</span>
+  </button>
+  <div class="rare-star-overlay" id="rare-star-overlay" aria-hidden="true">
+    <div class="rare-star-scene" role="dialog" aria-modal="true" aria-labelledby="rare-star-title">
+      <button class="rare-star-close" id="rare-star-close" type="button" aria-label="Fechar mensagem especial">×</button>
+      <div class="cosmic-bloom" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <p class="eyebrow">Estrela rara encontrada</p>
+      <h2 id="rare-star-title">Um desejo do universo</h2>
+      <p>
+        Maria Eduarda, se o universo me concedesse apenas um desejo, eu não pediria mais tempo, mais sorte ou mais riquezas. Pediria apenas que, em cada capítulo da minha vida, você continuasse fazendo parte da minha história. Porque entre todas as coisas bonitas que já aconteceram comigo, você continua sendo a mais especial.
+      </p>
+    </div>
+  </div>
 
   <header class="site-header">
     <div class="brand">
@@ -45,13 +63,22 @@
           <div class="orbit orbit-one" aria-hidden="true"></div>
           <div class="orbit orbit-two" aria-hidden="true"></div>
           <div class="moon" aria-hidden="true"></div>
+          <div class="pompom-astronaut pompom-floating" aria-hidden="true">
+            <span class="astronaut-helmet"></span>
+            <img src="Personalizar/pompurin.jpeg" alt="" loading="lazy">
+          </div>
           <div class="planet is-changing" id="planet" aria-hidden="true">
             <span class="planet-shine"></span>
             <span class="planet-ring" id="planet-ring"></span>
           </div>
+          <div class="pompom-astronaut pompom-on-planet" aria-hidden="true">
+            <span class="astronaut-helmet"></span>
+            <img src="Personalizar/pompurin.jpeg" alt="" loading="lazy">
+          </div>
         </div>
 
         <article class="info-card planet-info">
+          <img class="decor-sticker sticker-gata" src="Personalizar/gata.jpeg" alt="" aria-hidden="true" loading="lazy">
           <p class="eyebrow" id="planet-kicker">Planeta atual</p>
           <h2 id="planet-name">Mercúrio</h2>
           <p id="planet-description">
@@ -70,6 +97,7 @@
       </div>
 
       <div class="counter-card">
+        <div class="counter-glow" aria-hidden="true"></div>
         <div class="days-box" aria-live="polite">
           <span id="days">0</span>
           <small>dias juntos</small>
@@ -92,6 +120,16 @@
 
         <p class="counter-note">Maria Eduarda, meu lugar favorito também é o tempo que eu passo com você.</p>
       </div>
+
+      <div class="counter-companions" aria-hidden="true">
+        <div class="pompom-astronaut pompom-hearts">
+          <span class="astronaut-helmet"></span>
+          <img src="Personalizar/pompurin.jpeg" alt="" loading="lazy">
+          <span class="heart-bubble">♡</span>
+          <span class="heart-bubble">♡</span>
+        </div>
+        <img src="Personalizar/WhatsApp Image 2026-06-08 at 19.14.56(1).jpeg" alt="" loading="lazy">
+      </div>
     </section>
 
     <section class="tab-panel" id="messages" aria-labelledby="messages-title">
@@ -100,9 +138,35 @@
         <h1 id="messages-title">Um lembrete bonito sempre que você tocar.</h1>
       </div>
 
-      <div class="message-card">
-        <p class="cute-message" id="cute-message">Você melhora meus dias.</p>
-        <button class="secondary-button" id="next-message" type="button">Nova mensagem</button>
+      <div class="message-feature">
+        <figure class="snoopy-outside">
+          <img src="Personalizar/Snoopy.jpeg" alt="Cartinha do Snoopy com a mensagem Pra lembrar que você é especial" loading="lazy">
+        </figure>
+
+        <div class="message-card universe-card">
+          <div class="message-lights" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="message-orbit" aria-hidden="true"></div>
+          <div class="message-showcase">
+            <div class="pompom-delivery">
+              <div class="pompom-astronaut pompom-messenger" aria-hidden="true">
+                <span class="astronaut-helmet"></span>
+                <img src="Personalizar/pompurin.jpeg" alt="" loading="lazy">
+              </div>
+              <div>
+                <span class="delivery-label" id="message-icon">💖 1</span>
+                <strong>Entrega espacial do Pompompurin</strong>
+              </div>
+            </div>
+            <p class="cute-message" id="cute-message">Você melhora meus dias.</p>
+          </div>
+          <button class="secondary-button" id="next-message" type="button">Nova mensagem</button>
+        </div>
       </div>
     </section>
 
@@ -115,10 +179,16 @@
         </p>
       </div>
 
+      <div class="text-memory-strip" aria-hidden="true">
+        <img src="Personalizar/WhatsApp Image 2026-06-08 at 19.14.55(2).jpeg" alt="" loading="lazy">
+        <img src="Personalizar/WhatsApp Image 2026-06-08 at 19.14.56(1).jpeg" alt="" loading="lazy">
+      </div>
+
       <div class="texts-layout">
         <div class="text-list" id="text-list" aria-label="Lista de textos"></div>
 
         <article class="reader-card" aria-live="polite">
+          <img class="decor-sticker sticker-patinho" src="Personalizar/patinho.jpeg" alt="" aria-hidden="true" loading="lazy">
           <p class="eyebrow" id="reader-kicker">Texto escolhido</p>
           <h2 id="reader-title">Para quando sentir saudade</h2>
           <p id="reader-body">
@@ -146,6 +216,11 @@
       </div>
 
       <div class="photo-board" id="photo-board" aria-live="polite"></div>
+
+      <div class="personal-gallery" aria-label="Detalhes fofos">
+        <img src="Personalizar/WhatsApp Image 2026-06-08 at 19.14.55.jpeg" alt="Desenho fofo de dois ursinhos com corações" loading="lazy">
+        <img src="Personalizar/WhatsApp Image 2026-06-08 at 19.14.55(3).jpeg" alt="Snoopy com corações" loading="lazy">
+      </div>
     </section>
   </main>
 

@@ -67,12 +67,67 @@ const planets = [
   },
 ];
 
-const cuteMessages = [
-  "Você melhora meus dias.",
-  "Eu quero me casar com você.",
-  "Você ilumina meus dias.",
-  "Quando eu pareci perdido você foi a luz na minha escuridão.",
-  "Você é importante pra mim.",
+const deliveredMessages = [
+  {
+    label: "💖 1",
+    text: "Em um universo com bilhões de estrelas, bilhões de pessoas e infinitas possibilidades, ainda acho incrível que o meu caminho tenha encontrado o seu.",
+  },
+  {
+    label: "🌙 2",
+    text: "Você não mudou apenas os meus dias. Você mudou a forma como eu enxergo o mundo, porque agora tudo parece mais bonito quando imagino você fazendo parte disso.",
+  },
+  {
+    label: "✨ 3",
+    text: "Se eu pudesse escolher novamente entre todas as pessoas do universo, em todas as vidas possíveis, eu continuaria escolhendo você.",
+  },
+  {
+    label: "🌹 4",
+    text: "Amar você não é apenas um sentimento. É uma decisão que faço todos os dias e que, curiosamente, se torna mais fácil a cada amanhecer.",
+  },
+  {
+    label: "⭐ 5",
+    text: "Meu lugar favorito nunca foi uma cidade, uma praia ou uma paisagem. Meu lugar favorito é qualquer lugar onde você esteja.",
+  },
+  {
+    label: "💫 6",
+    text: "Antes de você, eu contava os dias. Depois de você, comecei a colecionar memórias.",
+  },
+  {
+    label: "🌌 7",
+    text: "Talvez eu não consiga prometer uma vida perfeita, mas prometo que em cada desafio, em cada vitória e em cada sonho, você terá minha mão segurando a sua.",
+  },
+  {
+    label: "💞 8",
+    text: "Você é a calma que encontrei em meio ao caos e a certeza que encontrei em meio às dúvidas.",
+  },
+  {
+    label: "🪐 9",
+    text: "Quando penso no futuro, não imagino riquezas ou conquistas. Imagino você ao meu lado, e isso já me parece suficiente.",
+  },
+  {
+    label: "❤️ 10",
+    text: "Existem sentimentos que não cabem em palavras. O amor que sinto por você é um deles, mas ainda assim passo todos os dias tentando demonstrá-lo.",
+  },
+  {
+    label: "🌠 11",
+    text: "Você se tornou parte das minhas orações, dos meus planos, dos meus pensamentos e dos meus melhores sonhos.",
+  },
+  {
+    label: "💌 12",
+    text: "Se um dia eu me perder, sei que encontrarei o caminho de volta apenas seguindo a luz que existe no seu sorriso.",
+  },
+  {
+    label: "🌙 13",
+    text: "Obrigado por existir exatamente como você é. Com suas qualidades, seus defeitos, seus medos e seus sonhos. É essa pessoa inteira que eu amo.",
+  },
+  {
+    label: "✨ 14",
+    text: "Você é a prova de que algumas pessoas entram em nossas vidas e transformam tudo sem precisar mudar nada.",
+  },
+  {
+    label: "💖 15",
+    text: "Não importa quanto tempo passe. Sempre haverá uma parte de mim que ficará admirando você como se fosse a primeira vez.",
+  },
 ];
 
 const songs = [
@@ -112,14 +167,14 @@ const songs = [
 
 const loveTexts = [
   {
-    title: "Para quando sentir saudade",
-    tag: "Saudade",
-    body: "Maria Eduarda,\n\nesse espaço é para um texto seu. Quando quiser trocar, edite este conteúdo no array loveTexts dentro do script.js.\n\nAqui pode ficar uma carta sobre saudade, sobre um dia especial ou sobre qualquer coisa que você queira que ela leia no celular.",
+    title: "Dia 1",
+    tag: "Primeiro dia",
+    body: "Dia 1 sem falar com o amor da minha vida, passei o dia inteiro sem ela, sem dúvidas foi um dia ruim, mas eu sei que vão melhorar pq ela vai estar bem e feliz eu sei pq eu confio nela, hoje foi um grande dia de trabalho, trabalhei bastante, fiquei longe do EB e me mantive focado em programar pra ela esse belo site, eu passei o dia pensando em você, se estava bem, foi o primeiro dia que nos falamos tão pouco, mas eu não parei de republicar vídeos que eu via e pensava em vc, passei o dia também me imaginando como vai ser quando eu te ver, estou me esforçando o dobro para ganhar dinheiro e juntar para um dia te ver, ver seus olhos, seu rosto, tudo de perto, e eu vou lutar por isso, assim como luto por nós todos os dias, você é a mulher da minha vida isso não tenho dúvidas, vc disse que eu não dormiria hoje na escola e foi isso mesmo, não consegui nem fechar o olho, nem ficar bem no intervalo, passei todos os momentos do meu dia pensando na pessoa mais importante do mundo pra mim, uma Maria Eduarda Marinho, ela é educada, me entende, é perfeita em todos os aspectos e sabe jogar Roblox, tive a ideia de fazer um site pq é meu primeiro presente de mês de namoro e queria que fosse especial, espero que ela não chore vendo isso, pq eu me esforcei, me esforcei muito pra não escrever todos os textos em um dia, eu acabo percebendo que eu quero ela de uma forma absurda, não tenho inseguranças, não sou triste quando estou com ela, meu dia só melhora quando falo e converso muito com ela, ela disse que eu tinha que escolher como gosto de ser chamado, eu gosto quando ela me chama de amor, mas imagina ela me chamando de príncipe? Eu sou o príncipe dela e ela minha princesa, vou lutar por ela até o último dia da minha vida, até que minha última gota de sangue pingue, até o último ar que eu respire, estarei esperando por isso, estarei lutando e fazendo ela feliz em cada dia da minha vida estarei cuidando dela sempre, eu a amo e disso não tenho dúvidas nenhuma. Sou muito grato por ter conhecido ela, pode ter sido tudo muito rápido, e eu sou feliz, pq foi com ela, eu a amo sem dúvidas, eu te amo com a alma minha Maria!",
   },
   {
-    title: "Para quando precisar sorrir",
-    tag: "Sorriso",
-    body: "Meu amor,\n\ncoloque aqui um texto leve, daqueles que fazem ela abrir um sorriso sem perceber. Você pode escrever com calma e deixar salvo nessa aba.",
+    title: "Para quando se sentir desmotivada",
+    tag: "Motivação",
+    body: "Quando pensar em mim, pense sem medo, pois sou um garoto que te ama como você é, que ama seu cabelo, seus olhos, seu sorriso, seu rosto, sua cintura, sua marquinha, que ama você por completo sem distinção e, claro, amo mais ainda sua personalidade. Uma mulher incrível e maravilhosa que demonstra muita coisa linda e bela todos os dias, mostra que ama, mostra que é incrível.\n\nVocê sem dúvidas é uma mulher esforçada e incrível. Você não tem erros, mas sim é o significado de perfeição. Todos os seus bom dias e boa noites salvam meu dia. Quando você fala comigo, você me salva de mim mesmo. Sou grato por ter conhecido uma mulher tão incrível, maravilhosa e especial como você. Nunca vou me arrepender de ter te pedido em namoro.\n\nVocê é perfeita, e todos os dias demonstra do seu jeito que é perfeita e maravilhosa como é. Sem dúvidas eu quero te ver ganhar o mundo, minha princesa. Você tem total lugar no meu coração, e eu te amo demais. Não sei descrever o quanto.",
   },
   {
     title: "Para lembrar do quanto é importante",
@@ -158,6 +213,10 @@ const elements = {
   nextPlanet: document.querySelector("#next-planet"),
   nextMessage: document.querySelector("#next-message"),
   cuteMessage: document.querySelector("#cute-message"),
+  messageIcon: document.querySelector("#message-icon"),
+  rareStar: document.querySelector("#rare-star"),
+  rareStarOverlay: document.querySelector("#rare-star-overlay"),
+  rareStarClose: document.querySelector("#rare-star-close"),
   musicList: document.querySelector("#music-list"),
   photoBoard: document.querySelector("#photo-board"),
   textList: document.querySelector("#text-list"),
@@ -176,20 +235,85 @@ let activeMessage = 0;
 let activeText = 0;
 
 const pad = (value) => String(value).padStart(2, "0");
+const prefersReducedMotion = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const isSmallScreen = () => window.innerWidth < 620;
 
 document.body.dataset.activeTab = "planets";
 
-function setActiveTab(tabName) {
+function handleMissingImage(event) {
+  const image = event.target;
+
+  if (!(image instanceof HTMLImageElement)) {
+    return;
+  }
+
+  const photoCard = image.closest(".photo-card");
+
+  if (photoCard) {
+    const placeholder = document.createElement("div");
+    const cardNumber = photoCard.className.match(/photo-card-(\d+)/)?.[1] || "";
+
+    placeholder.className = "photo-placeholder";
+    placeholder.setAttribute("aria-hidden", "true");
+    placeholder.textContent = cardNumber;
+    image.replaceWith(placeholder);
+    photoCard.classList.add("is-empty");
+    return;
+  }
+
+  image.remove();
+}
+
+document.addEventListener("error", handleMissingImage, true);
+
+function getHeaderOffset() {
+  const header = document.querySelector(".site-header");
+  return header ? header.getBoundingClientRect().height + 12 : 0;
+}
+
+function scrollPanelIntoView(tabName, activeButton) {
+  const panel = document.querySelector(`#${tabName}`);
+
+  if (!panel) {
+    return;
+  }
+
+  const behavior = prefersReducedMotion() ? "auto" : "smooth";
+
+  activeButton?.scrollIntoView({ behavior, block: "nearest", inline: "center" });
+
+  const panelTop = panel.getBoundingClientRect().top + window.scrollY - getHeaderOffset();
+
+  window.scrollTo({
+    top: Math.max(0, panelTop),
+    behavior,
+  });
+}
+
+function setActiveTab(tabName, shouldScroll = false) {
   document.body.dataset.activeTab = tabName;
+  let activeButton = null;
 
   document.querySelectorAll(".nav-tab").forEach((button) => {
     const isActive = button.dataset.tab === tabName;
     button.classList.toggle("is-active", isActive);
     button.setAttribute("aria-current", isActive ? "page" : "false");
+
+    if (isActive) {
+      activeButton = button;
+    }
   });
 
   document.querySelectorAll(".tab-panel").forEach((panel) => {
     panel.classList.toggle("is-active", panel.id === tabName);
+  });
+
+  if (!shouldScroll) {
+    return;
+  }
+
+  window.requestAnimationFrame(() => {
+    scrollPanelIntoView(tabName, activeButton);
   });
 }
 
@@ -219,11 +343,38 @@ function showNextPlanet() {
 }
 
 function showNextMessage() {
-  activeMessage = (activeMessage + 1) % cuteMessages.length;
+  activeMessage = (activeMessage + 1) % deliveredMessages.length;
+  setDeliveredMessage(activeMessage);
+}
+
+function setDeliveredMessage(index) {
+  const message = deliveredMessages[index];
+
   elements.cuteMessage.classList.remove("is-changing");
   void elements.cuteMessage.offsetWidth;
-  elements.cuteMessage.textContent = cuteMessages[activeMessage];
+  elements.messageIcon.textContent = message.label;
+  elements.cuteMessage.textContent = message.text;
   elements.cuteMessage.classList.add("is-changing");
+}
+
+function openRareStar() {
+  elements.rareStarOverlay.classList.add("is-open");
+  elements.rareStarOverlay.setAttribute("aria-hidden", "false");
+  document.body.classList.add("rare-star-open");
+}
+
+function closeRareStar() {
+  elements.rareStarOverlay.classList.remove("is-open");
+  elements.rareStarOverlay.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("rare-star-open");
+}
+
+function revealRareStar() {
+  const delay = prefersReducedMotion() ? 900 : 3200;
+
+  window.setTimeout(() => {
+    elements.rareStar.classList.add("is-visible");
+  }, delay);
 }
 
 function updateLoveCounter() {
@@ -298,7 +449,7 @@ function renderPhotos() {
     .join("");
 }
 
-function setText(index) {
+function setText(index, shouldScroll = false) {
   const text = loveTexts[index];
   activeText = index;
 
@@ -314,6 +465,18 @@ function setText(index) {
     button.classList.toggle("is-active", isActive);
     button.setAttribute("aria-pressed", String(isActive));
   });
+
+  if (shouldScroll && isSmallScreen()) {
+    window.requestAnimationFrame(() => {
+      const behavior = prefersReducedMotion() ? "auto" : "smooth";
+      const readerTop = elements.readerCard.getBoundingClientRect().top + window.scrollY - getHeaderOffset();
+
+      window.scrollTo({
+        top: Math.max(0, readerTop),
+        behavior,
+      });
+    });
+  }
 }
 
 function renderTexts() {
@@ -329,25 +492,40 @@ function renderTexts() {
     .join("");
 
   document.querySelectorAll(".text-option").forEach((button) => {
-    button.addEventListener("click", () => setText(Number(button.dataset.textIndex)));
+    button.addEventListener("click", () => setText(Number(button.dataset.textIndex), true));
   });
 
   setText(activeText);
 }
 
 document.querySelectorAll(".nav-tab").forEach((button) => {
-  button.addEventListener("click", () => setActiveTab(button.dataset.tab));
+  button.addEventListener("click", () => setActiveTab(button.dataset.tab, true));
 });
 
 elements.nextPlanet.addEventListener("click", showNextPlanet);
 elements.nextMessage.addEventListener("click", showNextMessage);
+elements.rareStar.addEventListener("click", openRareStar);
+elements.rareStarClose.addEventListener("click", closeRareStar);
+elements.rareStarOverlay.addEventListener("click", (event) => {
+  if (event.target === elements.rareStarOverlay) {
+    closeRareStar();
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && elements.rareStarOverlay.classList.contains("is-open")) {
+    closeRareStar();
+  }
+});
 
 setPlanet(activePlanet);
+setDeliveredMessage(activeMessage);
 renderSongs();
 renderPhotos();
 renderTexts();
 updateLoveCounter();
 setInterval(updateLoveCounter, 1000);
+revealRareStar();
 
 const canvas = document.querySelector("#sky-canvas");
 const context = canvas.getContext("2d");
@@ -355,10 +533,7 @@ const meteors = [];
 let lastMeteorSpawn = 0;
 let lastFrameTime = 0;
 let skyPaused = false;
-
-function isSmallScreen() {
-  return window.innerWidth < 620;
-}
+let resizeTimer = 0;
 
 function resizeCanvas() {
   const pixelRatio = isSmallScreen() ? 1 : Math.min(window.devicePixelRatio || 1, 1.6);
@@ -515,6 +690,22 @@ seedMeteors();
 animateSky();
 
 window.addEventListener("resize", () => {
+  window.clearTimeout(resizeTimer);
+  resizeTimer = window.setTimeout(() => {
+    resizeCanvas();
+    seedMeteors();
+  }, 120);
+});
+
+window.addEventListener("orientationchange", () => {
+  window.setTimeout(() => {
+    window.scrollTo({ top: window.scrollY, behavior: "auto" });
+    resizeCanvas();
+    seedMeteors();
+  }, 220);
+});
+
+window.addEventListener("pageshow", () => {
   resizeCanvas();
   seedMeteors();
 });
