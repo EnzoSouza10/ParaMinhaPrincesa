@@ -26,16 +26,17 @@
       <button class="nav-tab" type="button" data-tab="messages">Mensagens</button>
       <button class="nav-tab" type="button" data-tab="texts">Textos</button>
       <button class="nav-tab" type="button" data-tab="music">Músicas</button>
+      <button class="nav-tab" type="button" data-tab="photos">Fotos</button>
     </nav>
   </header>
 
   <main class="app-shell">
     <section class="tab-panel is-active" id="planets" aria-labelledby="planets-title">
       <div class="hero-copy">
-        <p class="eyebrow">Sistema solar do amor</p>
-        <h1 id="planets-title">Cada planeta guarda um pedaço do que sinto por você.</h1>
+        <p class="eyebrow">Sistema solar da Maduiu</p>
+        <h1 id="planets-title">Cada planeta guarda um pedaço do que eu sinto por você.</h1>
         <p class="subtitle">
-          Toque no botão para viajar pelos planetas do nosso sistema solar com uma chuva de meteoros ao fundo.
+          Um cantinho para viajar por memórias, carinho e tudo que fica bonito quando tem você no meio.
         </p>
       </div>
 
@@ -65,7 +66,7 @@
       <div class="hero-copy compact">
         <p class="eyebrow">Nosso tempo</p>
         <h1 id="counter-title">Contador do nosso amor</h1>
-        <p class="subtitle">Desde 06 de junho de 2026, cada segundo conta uma parte da nossa história.</p>
+        <p class="subtitle">Desde 06 de junho de 2026, cada segundo vira um pedacinho da nossa história.</p>
       </div>
 
       <div class="counter-card">
@@ -95,8 +96,8 @@
 
     <section class="tab-panel" id="messages" aria-labelledby="messages-title">
       <div class="hero-copy compact">
-        <p class="eyebrow">Mensagens fofas</p>
-        <h1 id="messages-title">Um lembrete sempre que você tocar.</h1>
+        <p class="eyebrow">Recadinhos para o coração</p>
+        <h1 id="messages-title">Um lembrete bonito sempre que você tocar.</h1>
       </div>
 
       <div class="message-card">
@@ -107,10 +108,10 @@
 
     <section class="tab-panel" id="texts" aria-labelledby="texts-title">
       <div class="hero-copy compact">
-        <p class="eyebrow">Textos para ela</p>
-        <h1 id="texts-title">Cartinhas para Maria Eduarda ler quando quiser.</h1>
+        <p class="eyebrow">Cartinhas guardadas</p>
+        <h1 id="texts-title">Para Maduiu de enzo..</h1>
         <p class="subtitle">
-          Toque em um título para abrir o texto. Depois você pode trocar os conteúdos no arquivo JavaScript.
+          Toque em um título para abrir um pedacinho escrito com calma, saudade e carinho.
         </p>
       </div>
 
@@ -131,10 +132,20 @@
       <div class="hero-copy compact">
         <p class="eyebrow">Nossa trilha sonora</p>
         <h1 id="music-title">Nossas músicas favoritas</h1>
-        <p class="subtitle">Uma aba só para as músicas que combinam com a gente.</p>
+        <p class="subtitle">Capas, lembranças e músicas que parecem falar baixinho sobre nós dois.</p>
       </div>
 
       <div class="music-grid" id="music-list"></div>
+    </section>
+
+    <section class="tab-panel" id="photos" aria-labelledby="photos-title">
+      <div class="hero-copy compact">
+        <p class="eyebrow">Nosso álbum especial</p>
+        <h1 id="photos-title">Fotos que guardam lugares onde meu coração ficou.</h1>
+        <p class="subtitle">Um pódio de memórias pequenas por fora, mas gigantes por dentro.</p>
+      </div>
+
+      <div class="photo-board" id="photo-board" aria-live="polite"></div>
     </section>
   </main>
 

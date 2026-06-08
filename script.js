@@ -82,6 +82,7 @@ const songs = [
     note: "Aquela música com cara de ficar pertinho e esquecer o resto do mundo.",
     dedication: "sentimento que sinto entre nos dois e dedico pra você essa musica",
     query: "Here With Me d4vd",
+    cover: "Musicas_imagens/Here_with_me.jpg",
   },
   {
     title: "Perfect",
@@ -89,6 +90,7 @@ const songs = [
     note: "Para lembrar que tem amor que parece cena bonita de filme.",
     dedication: "escuto e lembro da sua perfeição",
     query: "Perfect Ed Sheeran",
+    cover: "Musicas_imagens/Perfect.jpg",
   },
   {
     title: "Lisboa",
@@ -96,6 +98,7 @@ const songs = [
     note: "Leve, doce e com aquele sentimento de viagem boa a dois.",
     dedication: "primeira música que você me dedicou que eu sempre escuto",
     query: "ANAVITÓRIA Lisboa",
+    cover: "Musicas_imagens/Lisboa.jpg",
   },
   {
     title: "Cinnamon Girl",
@@ -103,6 +106,7 @@ const songs = [
     note: "Delicada, intensa e cheia de sentimento guardado nas entrelinhas.",
     dedication: "You are perfect for my, my girl!",
     query: "Cinnamon Girl Lana Del Rey",
+    cover: "Musicas_imagens/Cinnamon_girl.jpg",
   },
 ];
 
@@ -124,6 +128,27 @@ const loveTexts = [
   },
 ];
 
+const photos = [
+  {
+    rank: "Top 3",
+    title: "Assinatura",
+    caption: "o autografo de uma princesa, que sempre esteve guardado e tenho orgulho de ter...",
+    src: "Fotos/Assinatura.jpeg",
+  },
+  {
+    rank: "Top 2",
+    title: "Perfil",
+    caption: "mal sabia ele que o perfil do amor da vida dele era aquele, daquela menina do CLEA e do roblox...",
+    src: "Fotos/Perfil.jpeg",
+  },
+  {
+    rank: "Top 1",
+    title: "Foto chamada juntos",
+    caption: "primeira vez que estive junto com você e tiramos uma foto juntos, você tinha saído e não deu pra tirar foto do STM, eu fiquei triste, mas fiquei muito feliz em tirar essa foto com você, porque era com você, uma mulher que se tornou o amor da minha vida...",
+    src: "Fotos/Juntos.jpeg",
+  },
+];
+
 const elements = {
   planet: document.querySelector("#planet"),
   planetRing: document.querySelector("#planet-ring"),
@@ -134,6 +159,7 @@ const elements = {
   nextMessage: document.querySelector("#next-message"),
   cuteMessage: document.querySelector("#cute-message"),
   musicList: document.querySelector("#music-list"),
+  photoBoard: document.querySelector("#photo-board"),
   textList: document.querySelector("#text-list"),
   readerCard: document.querySelector(".reader-card"),
   readerKicker: document.querySelector("#reader-kicker"),
@@ -151,7 +177,11 @@ let activeText = 0;
 
 const pad = (value) => String(value).padStart(2, "0");
 
+document.body.dataset.activeTab = "planets";
+
 function setActiveTab(tabName) {
+  document.body.dataset.activeTab = tabName;
+
   document.querySelectorAll(".nav-tab").forEach((button) => {
     const isActive = button.dataset.tab === tabName;
     button.classList.toggle("is-active", isActive);
@@ -226,8 +256,11 @@ function renderSongs() {
 
       return `
         <article class="music-card">
-          <div>
-            <div class="music-art" aria-hidden="true">${index + 1}</div>
+          <div class="music-cover-wrap">
+            <img class="music-cover" src="${song.cover}" alt="Capa de ${song.title}" loading="lazy">
+            <span class="music-number" aria-hidden="true">${index + 1}</span>
+          </div>
+          <div class="music-content">
             <h2>${song.title}</h2>
             <p><strong>${song.artist}</strong></p>
             <p>${song.note}</p>
@@ -236,6 +269,29 @@ function renderSongs() {
           <a class="music-button" href="${searchUrl}" target="_blank" rel="noopener noreferrer">
             Ouvir música
           </a>
+        </article>
+      `;
+    })
+    .join("");
+}
+
+function renderPhotos() {
+  elements.photoBoard.innerHTML = photos
+    .map((photo, index) => {
+      const hasImage = Boolean(photo.src);
+
+      return `
+        <article class="photo-card photo-card-${index + 1} ${hasImage ? "" : "is-empty"}">
+          <span class="photo-rank">${photo.rank}</span>
+          ${
+            hasImage
+              ? `<img src="${photo.src}" alt="${photo.title}" loading="lazy">`
+              : `<div class="photo-placeholder" aria-hidden="true">${index + 1}</div>`
+          }
+          <div class="photo-caption">
+            <span>${photo.title}</span>
+            <p>${photo.caption}</p>
+          </div>
         </article>
       `;
     })
@@ -288,6 +344,7 @@ elements.nextMessage.addEventListener("click", showNextMessage);
 
 setPlanet(activePlanet);
 renderSongs();
+renderPhotos();
 renderTexts();
 updateLoveCounter();
 setInterval(updateLoveCounter, 1000);
@@ -296,9 +353,15 @@ const canvas = document.querySelector("#sky-canvas");
 const context = canvas.getContext("2d");
 const meteors = [];
 let lastMeteorSpawn = 0;
+let lastFrameTime = 0;
+let skyPaused = false;
+
+function isSmallScreen() {
+  return window.innerWidth < 620;
+}
 
 function resizeCanvas() {
-  const pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
+  const pixelRatio = isSmallScreen() ? 1 : Math.min(window.devicePixelRatio || 1, 1.6);
 
   canvas.width = Math.floor(window.innerWidth * pixelRatio);
   canvas.height = Math.floor(window.innerHeight * pixelRatio);
@@ -315,13 +378,13 @@ class Meteor {
   reset(delayStart = false) {
     this.x = Math.random() * window.innerWidth * 1.35 - window.innerWidth * 0.25;
     this.y = Math.random() * window.innerHeight * 0.34;
-    this.speed = Math.random() * 3.6 + 3.2;
+    this.speed = Math.random() * (isSmallScreen() ? 2.4 : 3.6) + (isSmallScreen() ? 2.4 : 3.2);
     this.angle = Math.PI / 4 + (Math.random() - 0.5) * 0.24;
     this.velocityX = Math.cos(this.angle) * this.speed;
     this.velocityY = Math.sin(this.angle) * this.speed;
     this.opacity = Math.random() * 0.54 + 0.28;
     this.life = 0;
-    this.maxLife = Math.random() * 44 + 34;
+    this.maxLife = Math.random() * (isSmallScreen() ? 28 : 44) + (isSmallScreen() ? 28 : 34);
     this.trail = [];
     this.active = !delayStart;
   }
@@ -334,7 +397,9 @@ class Meteor {
 
     this.trail.push({ x: this.x, y: this.y });
 
-    if (this.trail.length > 10) {
+    const maxTrail = isSmallScreen() ? 6 : 10;
+
+    if (this.trail.length > maxTrail) {
       this.trail.shift();
     }
 
@@ -377,7 +442,7 @@ class Meteor {
     const head = this.trail[this.trail.length - 1];
     const glow = context.createRadialGradient(head.x, head.y, 0, head.x, head.y, 11);
     glow.addColorStop(0, `rgba(255, 255, 255, ${headOpacity})`);
-    glow.addColorStop(0.34, `rgba(125, 216, 255, ${headOpacity * 0.32})`);
+    glow.addColorStop(0.34, `rgba(125, 216, 255, ${headOpacity * 0.28})`);
     glow.addColorStop(1, "rgba(125, 216, 255, 0)");
 
     context.fillStyle = glow;
@@ -390,7 +455,7 @@ class Meteor {
 
 function seedMeteors() {
   meteors.length = 0;
-  const count = window.innerWidth < 520 ? 4 : 6;
+  const count = isSmallScreen() ? 2 : 6;
 
   for (let index = 0; index < count; index += 1) {
     meteors.push(new Meteor(true));
@@ -399,7 +464,7 @@ function seedMeteors() {
 
 function spawnMeteorBurst() {
   const now = Date.now();
-  const nextDelay = window.innerWidth < 520 ? 2500 + Math.random() * 4200 : 1700 + Math.random() * 3300;
+  const nextDelay = isSmallScreen() ? 3600 + Math.random() * 5200 : 1700 + Math.random() * 3300;
 
   if (now - lastMeteorSpawn < nextDelay) {
     return;
@@ -411,14 +476,29 @@ function spawnMeteorBurst() {
     meteors.push(new Meteor());
   }
 
-  while (meteors.length > 15) {
+  const maxMeteors = isSmallScreen() ? 5 : 15;
+
+  while (meteors.length > maxMeteors) {
     meteors.shift();
   }
 
   lastMeteorSpawn = now;
 }
 
-function animateSky() {
+function animateSky(timestamp = 0) {
+  if (skyPaused) {
+    requestAnimationFrame(animateSky);
+    return;
+  }
+
+  const targetFrame = isSmallScreen() ? 48 : 16;
+
+  if (timestamp - lastFrameTime < targetFrame) {
+    requestAnimationFrame(animateSky);
+    return;
+  }
+
+  lastFrameTime = timestamp;
   context.clearRect(0, 0, window.innerWidth, window.innerHeight);
   spawnMeteorBurst();
 
@@ -437,4 +517,8 @@ animateSky();
 window.addEventListener("resize", () => {
   resizeCanvas();
   seedMeteors();
+});
+
+document.addEventListener("visibilitychange", () => {
+  skyPaused = document.hidden;
 });
