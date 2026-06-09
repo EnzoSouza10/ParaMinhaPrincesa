@@ -230,7 +230,7 @@ const elements = {
   seconds: document.querySelector("#seconds"),
 };
 
-let activePlanet = 0;
+let activePlanet = 4;
 let activeMessage = 0;
 let activeText = 0;
 

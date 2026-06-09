@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="theme-color" content="#070914" />
   <title>Universo da Maria Eduarda</title>
   <link rel="stylesheet" href="style.css" />
@@ -39,54 +39,63 @@
     </div>
 
     <nav class="nav-tabs" aria-label="Seções do site">
-      <button class="nav-tab is-active" type="button" data-tab="planets">Planetas</button>
-      <button class="nav-tab" type="button" data-tab="counter">Contador</button>
-      <button class="nav-tab" type="button" data-tab="messages">Mensagens</button>
-      <button class="nav-tab" type="button" data-tab="texts">Textos</button>
-      <button class="nav-tab" type="button" data-tab="music">Músicas</button>
-      <button class="nav-tab" type="button" data-tab="photos">Fotos</button>
+      <button class="nav-tab is-active" type="button" data-tab="planets"><span aria-hidden="true">🪐</span> Planetas</button>
+      <button class="nav-tab" type="button" data-tab="counter"><span aria-hidden="true">♡</span> Contador</button>
+      <button class="nav-tab" type="button" data-tab="messages"><span aria-hidden="true">☁</span> Mensagens</button>
+      <button class="nav-tab" type="button" data-tab="texts"><span aria-hidden="true">♧</span> Textos</button>
+      <button class="nav-tab" type="button" data-tab="music"><span aria-hidden="true">♫</span> Músicas</button>
+      <button class="nav-tab" type="button" data-tab="photos"><span aria-hidden="true">▣</span> Fotos</button>
     </nav>
   </header>
 
   <main class="app-shell">
     <section class="tab-panel is-active" id="planets" aria-labelledby="planets-title">
       <div class="hero-copy">
-        <p class="eyebrow">Sistema solar da Maduiu</p>
-        <h1 id="planets-title">Cada planeta guarda um pedaço do que eu sinto por você.</h1>
+        <p class="eyebrow">✦ Sistema solar da Maduiu ✦</p>
+        <h1 id="planets-title">Cada planeta guarda um pedaço do que eu sinto por você. <span aria-hidden="true">♥</span></h1>
         <p class="subtitle">
-          Um cantinho para viajar por memórias, carinho e tudo que fica bonito quando tem você no meio.
+          Um cantinho para viajar por memórias, carinho e tudo que fica bonito quando tem <strong>você no meio.</strong>
         </p>
       </div>
 
       <div class="planet-layout">
-        <div class="orbit-area" aria-live="polite">
-          <div class="orbit orbit-one" aria-hidden="true"></div>
-          <div class="orbit orbit-two" aria-hidden="true"></div>
-          <div class="moon" aria-hidden="true"></div>
-          <div class="pompom-astronaut pompom-floating" aria-hidden="true">
-            <span class="astronaut-helmet"></span>
-            <img src="Personalizar/pompurin.jpeg" alt="" loading="lazy">
+          <div class="orbit-area" aria-live="polite">
+            <div class="orbit orbit-one" aria-hidden="true"></div>
+            <div class="orbit orbit-two" aria-hidden="true"></div>
+            <div class="moon" aria-hidden="true"></div>
+            <span class="orbit-heart heart-one" aria-hidden="true">♡</span>
+            <span class="orbit-heart heart-two" aria-hidden="true">♡</span>
+            <span class="orbit-heart heart-three" aria-hidden="true">♥</span>
+            <div class="pompom-astronaut pompom-floating" aria-hidden="true">
+              <span class="astronaut-helmet"></span>
+              <img src="Personalizar/pompurin.jpeg" alt="" loading="lazy">
+            </div>
+            <span class="love-tag tag-you" aria-hidden="true">♥ você</span>
+            <div class="planet is-changing" id="planet" aria-hidden="true">
+              <span class="planet-shine"></span>
+              <span class="planet-ring" id="planet-ring"></span>
+            </div>
+            <div class="pompom-astronaut pompom-on-planet" aria-hidden="true">
+              <span class="astronaut-helmet"></span>
+              <img src="Personalizar/pompurin.jpeg" alt="" loading="lazy">
+            </div>
+            <span class="love-tag tag-me" aria-hidden="true">♥ eu</span>
+            <p class="orbit-signature">Nosso universo favorito ♡</p>
           </div>
-          <div class="planet is-changing" id="planet" aria-hidden="true">
-            <span class="planet-shine"></span>
-            <span class="planet-ring" id="planet-ring"></span>
-          </div>
-          <div class="pompom-astronaut pompom-on-planet" aria-hidden="true">
-            <span class="astronaut-helmet"></span>
-            <img src="Personalizar/pompurin.jpeg" alt="" loading="lazy">
-          </div>
-        </div>
 
         <article class="info-card planet-info">
           <img class="decor-sticker sticker-gata" src="Personalizar/gata.jpeg" alt="" aria-hidden="true" loading="lazy">
-          <p class="eyebrow" id="planet-kicker">Planeta atual</p>
+          <p class="eyebrow" id="planet-kicker">♥ Planeta atual</p>
           <h2 id="planet-name">Mercúrio</h2>
           <p id="planet-description">
             Pequeno, intenso e rápido, como aqueles segundos em que só um olhar seu muda meu dia.
           </p>
-          <button class="primary-button" id="next-planet" type="button">Trocar planeta</button>
+          <p class="planet-note">♥ Assim como Júpiter protege tudo ao seu redor, você protege meu mundo.</p>
+          <button class="primary-button" id="next-planet" type="button">Trocar planeta <span aria-hidden="true">♬ 🪐</span></button>
         </article>
       </div>
+
+      <p class="hero-quote">✦ “Todo lugar fica especial quando é com você.” ✦</p>
     </section>
 
     <section class="tab-panel" id="counter" aria-labelledby="counter-title">
